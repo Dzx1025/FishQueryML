@@ -1,0 +1,6 @@
+platform:
+  url: https://django.dzx1025.com:8000
+  token:
+qdrant:
+  url: https://qdrant.fishquery.dzx1025.com
+  port: 443
