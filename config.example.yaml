@@ -1,0 +1,14 @@
+platform:
+  url: https://django.dzx1025.com:8000
+qdrant:
+  url: https://qdrant.fishquery.dzx1025.com:443
+  collection_name: fishing_rules
+openai:
+  api_key: your-openai-api-key
+  model: gpt-4o
+embed:
+  token: your-embed-token
+  model: nomic-embed-text-v1.5
+  # Chunking parameters
+  chunk_size: 1000
+  chunk_overlap: 200

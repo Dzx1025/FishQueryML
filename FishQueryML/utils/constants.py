@@ -13,3 +13,5 @@ if not CONFIG_YAML.exists():
 DATA_DIR = PROJECT_ROOT / "data"
 
 DATA_DIR.mkdir(exist_ok=True)
+
+logger.info(f"DATA_DIR: {DATA_DIR}")
