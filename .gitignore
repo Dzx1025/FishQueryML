@@ -69,5 +69,5 @@ Pipfile.lock
 # poetry
 poetry.lock
 
-config.yml
+config.yaml
 data
