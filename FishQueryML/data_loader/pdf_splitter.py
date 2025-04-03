@@ -248,4 +248,4 @@ def process_directory_with_splitting(dir_path: Union[str, Path], chunk_size: int
 
 if __name__ == "__main__":
     # Process a single file with text splitting
-    process_file_with_splitting(DATA_DIR / "origin.pdf", chunk_size, chunk_overlap)
+    process_file_with_splitting(DATA_DIR / "recreational_fishing_guide.pdf", chunk_size, chunk_overlap)
