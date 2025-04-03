@@ -23,7 +23,7 @@ if not OUTPUT_DIR.exists():
     logger.error(f"Output directory does not exist: {OUTPUT_DIR}")
     raise NotADirectoryError(f"Output directory does not exist: {OUTPUT_DIR}")
 
-json_file = DATA_DIR / "output" / "origin_chunk.json"
+json_file = DATA_DIR / "output" / "recreational_fishing_guide_chunk.json"
 
 if not json_file:
     logger.error(f"No JSON files found to process in: {OUTPUT_DIR}")
@@ -35,9 +35,9 @@ collection_name = config['qdrant']['collection_name']
 vector_size = 768  # Nomic embeddings dimensionality
 
 # Nomic API configuration
-NOMIC_TOKEN = config['nomic']['token']
+NOMIC_TOKEN = config['embed']['token']
 NOMIC_URL = "https://api-atlas.nomic.ai/v1/embedding/text"
-NOMIC_MODEL = config['nomic']['model']
+NOMIC_MODEL = config['embed']['model']
 TASK_TYPE = "search_document"
 
 # Batch sizes for processing
