@@ -15,3 +15,6 @@ DATA_DIR = PROJECT_ROOT / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
 logger.info(f"DATA_DIR: {DATA_DIR}")
+
+# URL for the recreational fishing guide
+RECREATIONAL_FISHING_GUIDE_URL = "https://www.dpird.wa.gov.au/siteassets/documents/fisheries/recreational/guides-and-infographics/recreational_fishing_guide.pdf/"

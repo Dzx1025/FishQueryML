@@ -6,7 +6,7 @@ from typing import Dict, Any, List, Union
 from loguru import logger
 from tqdm import tqdm
 
-from FishQueryML.utils.constants import DATA_DIR
+from FishQueryML.utils.constants import DATA_DIR, RECREATIONAL_FISHING_GUIDE_URL
 from FishQueryML.utils.config_reader import ConfigReader
 from FishQueryML.utils.constants import CONFIG_YAML
 
@@ -143,7 +143,7 @@ def load_and_split_pdf(file_path: Path, chunk_size: int, chunk_overlap: int) -> 
                                 'page': i,
                                 'chunk': j,
                                 'total_pages': total_pages,
-                                'source': str(file_path)
+                                'source': RECREATIONAL_FISHING_GUIDE_URL
                             }
                         })
 
@@ -171,7 +171,7 @@ def load_and_split_text(file_path: Path, chunk_size: int, chunk_overlap: int) ->
                 'page_content': chunk,
                 'metadata': {
                     'chunk': i,
-                    'source': str(file_path)
+                    'source': RECREATIONAL_FISHING_GUIDE_URL
                 }
             })
 

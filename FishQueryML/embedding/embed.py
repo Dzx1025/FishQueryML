@@ -32,6 +32,7 @@ if not json_file:
 # Qdrant configuration
 qdrant_url = config['qdrant']['url']
 collection_name = config['qdrant']['collection_name']
+qdrant_api_key = config['qdrant']['api_key']
 vector_size = 768  # Nomic embeddings dimensionality
 
 # Nomic API configuration
@@ -215,7 +216,7 @@ def main():
 
         # Connect to Qdrant
         logger.info(f"Connecting to Qdrant at: {qdrant_url}")
-        client = QdrantClient(url=qdrant_url)
+        client = QdrantClient(url=qdrant_url, https=True, api_key=qdrant_api_key)
 
         # Initialize collection
         init_qdrant_collection(client, collection_name, vector_size, RECREATE_COLLECTION)

@@ -3,6 +3,7 @@ platform:
 qdrant:
   url: https://qdrant.fishquery.dzx1025.com:443
   collection_name: fishing_rules
+  api_key: qdrant_secret
 openai:
   api_key: your-openai-api-key
   model: gpt-4o
